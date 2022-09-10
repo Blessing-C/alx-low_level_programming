@@ -1,30 +1,28 @@
+#include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#include <stdio.h>
-
 /**
- * main -assign a random number to the variable
- * Description: print the last digit of the number stored in the variable 
+ * main - assign a random number to the variable n each time it is executed
+ * Description: prints  if a number is positive or negative.
  * Return: 0
  */
-
 int main(void)
 {
 	int n;
 
 	srand(time(0));
-	in = rand() - RAND_MAX / 2;
-	if (n > 5);
+	n = rand() - RAND_MAX / 2;
+	if (n > 0)
 	{
-		printf("%d and is greater that 5/n", n)
+		printf("%d is positive\n", n);
 	}
-	else if (n == 0);
+	else if (n == 0)
 	{
-		printf("%d and is 0");
+		printf("%d is zero\n", n);
 	}
-	else
+	else if (n < 0)
 	{
-		printf("%d and is less than 6 and not 0\n", n);
+		printf("%d is negative\n", n);
 	}
 	return (0);
 }
