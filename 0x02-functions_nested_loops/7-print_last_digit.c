@@ -1,25 +1,24 @@
 #include "main.h"
 /**
  * print_last_digit - prints the last digit of a number
- * @a: the given value
+ * @value: the given value
  * Return: returns 0 if succcessful 1 if otherwise
  */
 
-int print_last_digit(int a)
+int print_last_digit(int value)
 {
-	int b;
-	b = b % 10;
+	int remain = value % 10;
 
-	if (a < 0)
+	if (remain < 0)
 	{
-		b = -(b);
-		_putchar(b + '0');
-		return (b);
+		remain = -(remain);
+		_putchar(remain + '0');
+		return (remain);
 	}
 	else
 	{
-		_putchar(b + '0');
-		return (b);
+		_putchar(remain + '0');
+		return (remain);
 	}
 	return (0);
 }
