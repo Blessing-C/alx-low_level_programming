@@ -1,3 +1,1 @@
-
-clear
-ls
+C - Functions, nested loops
