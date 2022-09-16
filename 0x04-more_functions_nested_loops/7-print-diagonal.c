@@ -3,26 +3,24 @@
 /**
  * print_diagonal - diagonal lines made of backslashes
  * @n: number of \ to be printed
- * Return: void
+ * Return: Always 0
  */
-
 void print_diagonal(int n)
 {
-	int i = 0, ii;
+	int column, space, i;
 
-	while (i < n && n > 0)
+	if (n <= 0)
+		_putchar('\n');
+	else
 	{
-		ii = 0;
-		while (ii < i)
+		for (column = 0; column < n; column++)
 		{
-			_putchar(' ');
-			ii++;
-		}
+			i = column - 1;
 
-		_putchar('\\');
-		_putchar('\n');
-		i++;
+			for (space = 0; space <= i; space++)
+				_putchar(' ');
+			_putchar('\\');
+			_putchar('\n');
+		}
 	}
-	if (i == 0)
-		_putchar('\n');
 }
