@@ -1,12 +1,11 @@
 #include "main.h"
 
 /**
-  * _strlen - Prints a string
-  * @s: The string to print
-  *
-  * Return: Returns length of the string
+  * _puts - Prints a string
+  * @str: a param to _puts function
   */
-int _strlen(char *s)
+
+void _puts(char *str)
 {
 	for (; *str != '\0'; str++)
 	{
