@@ -1,6 +1,6 @@
 #include"main.h"
 /**
- * *_strcpy
+ * *_strcpy - copy paste string
  * @dest: destination value
  * @src: source value
  *
@@ -8,14 +8,13 @@
  */
 char *_strcpy(char *dest, char *src)
 {
-	int i = -1;
-	
-	for (i = 0; scr[i] != '\0'); i++)
+	int inc = 0;
 
-        {
-                dest[i] = scr[i];
-        }
-	dest[i++] = '\0';
-		
+	while (*(scr + inc) != '\0')
+{
+	*(dest + inc) = '(scr + inc);
+		inc++;
+}
+	*(dest + inc) = '\0';
 	return (dest);
 }
