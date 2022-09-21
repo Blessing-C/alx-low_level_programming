@@ -4,17 +4,20 @@
  * @dest: destination value
  * @src: source value
  *
- * Return: pointer to dest
+ * Return: pointer to destination
  */
+
 char *_strcpy(char *dest, char *src)
 {
 	int inc = 0;
 
-	while (*(scr + inc) != '\0')
-{
-	*(dest + inc) = *(scr + inc);
+	while (*(src + inc) != '\0')
+	{
+		*(dest + inc) = *(src + inc);
 		inc++;
-}
+	}
 	*(dest + inc) = '\0';
+
+
 	return (dest);
 }
