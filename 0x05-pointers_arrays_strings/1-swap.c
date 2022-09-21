@@ -6,7 +6,8 @@
   *  @b: Another integer to swap
   *  Return: 0
   */
-void swap_int(int *a, int *b);
+
+void swap_int(int *a, int *b)
 {
 	int tmp = *a;
 
