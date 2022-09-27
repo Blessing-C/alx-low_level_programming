@@ -6,14 +6,13 @@
  * @n: length of buffer
  * Return: A pointer to the memory area
  */
-char *_memset(char *s, char b, unsigned int n);
+char *_memset(char *s, char b, unsigned int n)
 {
-	unsigned int i = 0;
-
-	while (i < n)
+	while (n)
 	{
-		*(s = i) = b;
-		i++;
+		s[n - 1] = b;
+		n--;
 	}
+	
 	return (s);
 }
