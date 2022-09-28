@@ -1,10 +1,11 @@
 #include "main.h"
 
 /**
- * void _print_rev_recursion - prints a string in inverse
- * s: the string
- * Return: void
+ * _print_rev_recursion - prints inverse strings
+ * @s: the string
+ * Return: no returns
  */
+
 void _print_rev_recursion(char *s)
 {
 	if (*s != '\0')
