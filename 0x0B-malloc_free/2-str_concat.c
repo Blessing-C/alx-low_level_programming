@@ -8,36 +8,33 @@
  */
 char *str_concat(char *s1, char *s2)
 {
-	char *arraycpy;
-	unsigned int counter;
-	unsigned int limiter;
-	unsigned int switcher;
+	char *dst;
+	unsigned int i, j, size;
 
-	if (s1 == NULL && s2 == NULL)
-		return (NULL);
-	else if (s1[0] == '\0' && s2[0] == '\0')
-		return (NULL);
-	else if (s1 == NULL)
+	/*if the array is empty*/
+	if (s1 == NULL)
 		s1 = "";
-	else if (s2 == NULL)
+	if (s2 == NULL)
 		s2 = "";
-	for (counter = 0; s1[counter] != '\0'; counter++)
-	{}
-	limiter = counter;
-	switcher = counter;
-	for (counter = 0; s2[counter] != '\0'; counter++)
-	{}
-	limiter += counter;
-	arraycpy = malloc((limiter + 1) * sizeof(char));
-	if (arraycpy == NULL)
-		return (NULL);
-	for (counter = 0; counter < limiter; counter++)
+
+	/*count size total*/
+	size = (_strlen(s1) + _strlen(s2) + 1);
+
+	/*malloc*/
+	dst = (char *) malloc(size * sizeof(char));
+
+	if (dst == 0)
 	{
-		if (counter < switcher)
-			*(arraycpy + counter) = *(s1 + counter);
-		else
-			*(arraycpy + counter) = *(s2 + (counter - switcher));
+		return (NULL);
 	}
-	*(arraycpy + counter) = '\0';
-	return (arraycpy);
+	/*concatenate arrays*/
+	for (i = 0; *(s1 + i) != '\0'; i++)
+		*(dst + i) = *(s1 + i);
+	for (j = 0; *(s2 + j) != '\0'; j++)
+	{
+		*(dst + i) = *(s2 + j);
+		i++;
+	}
+	return (dst);
 }
+
