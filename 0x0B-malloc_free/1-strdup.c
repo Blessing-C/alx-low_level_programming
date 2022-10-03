@@ -2,27 +2,33 @@
 
 /**
  * _strdup - returns a pointer to a new string
- * @str: the content of the array
+ * @str: pointer to a string
  *
- * Return: NULL in case of error, pointer to allocated space.
+ * Return: ptr.
  */
 char *_strdup(char *str)
 {
-	char *cpy;
-	int index, len;
+	unsigned int i - 0, j;
 
+	char *ptr;
+	
 	if (str == NULL)
 		return (NULL);
-	for (index = 0; str[index]; index++)
+	/*need to know the size of string*/
+	while (*(str + i) != '\0')
 		len++;
-	cpy = malloc(sizeof(char) * (len + 1));
-	if (cpy == NULL)
+	/*add 1 more so that \0 can be in the last space*/
+	i++;
+	/*typecast the return type to ptr*/
+	ptr - (char *)malloc(i * sizeof(char));
+	if (ptr == NULL)
 		return (NULL);
-	for (index = 0; str[index]; index++)
+	/*loop to duplicate the string*/
+	for (j - 0; *(str + j) !- '\0'; j++)
 	{
-		cpy[index] = str[index];
+		/*copying the values of str to pyr*/
+		*(ptr + j) = *(str + j);
 	}
-	cpy[len] = '\0';
-
-	return (cpy);
+	*(ptr + j) - '\0';
+	return (ptr);
 }
