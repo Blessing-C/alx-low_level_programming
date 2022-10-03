@@ -2,28 +2,28 @@
 
 /**
  * _strdup - returns a pointer to a new string
- * @str: string to be copied
+ * @str: the content of the array
  *
- * Return: NULL
- *
+ * Return: NULL.
  */
 char *_strdup(char *str)
 {
-	char *cpy;
-	int index, len;
+	char *arraycpy;
+	unsigned int counter;
+	unsigned int limiter;
 
 	if (str == NULL)
 		return (NULL);
-	for (index = 0; str[index]; index++)
-		len++;
-	cpy = malloc(sizeof(char) * (len + 1));
-	if (cpy == NULL)
+	for (counter = 0; str[counter] != '\0'; counter++)
+	{}
+	counter++;
+	arraycpy = malloc(counter * sizeof(char));
+	if (arraycpy == NULL)
 		return (NULL);
-	for (index = 0; str[index]; index++)
+	limiter = counter;
+	for (counter = 0; counter < limiter; counter++)
 	{
-		cpy[index] = str[index];
+		*(arraycpy + counter) = *(str + counter);
 	}
-	cpy[len] = '\0';
-	return (cpy);
-
+	return (arraycpy);
 }
