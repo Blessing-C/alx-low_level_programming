@@ -4,7 +4,7 @@
 #include "../hash_tables.h"
 
 /**
- * main - check the code for ALX-Africa Cohort 5 Students.
+ * main - check the code for ALX-Africa Cohort Students.
  *
  * Return: Always EXIT_SUCCESS.
  */
@@ -23,4 +23,4 @@ int main(void)
 	hash_table_set(ht, "98", "Battery Street");
 	hash_table_print(ht);
 	return (EXIT_SUCCESS);
-}
+I}
